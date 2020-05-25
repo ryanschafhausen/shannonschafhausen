@@ -4,8 +4,10 @@
     <span>Shannon Schafhausen LMHC</span>
   </div>
   <div fxLayout="row" fxFlex>
-    <div fxLayout="column" fxFlex fxLayoutGap="2em">
-      <div fxLayout.gt-xs="row wrap" fxLayout.lt-md="column" fxFlex fxLayoutGap="2em">
+
+    <!-- gt-sm -->
+    <div fxLayout="column" fxFlex fxLayoutGap="2em" class="body" [fxHide.lt-md]="true">
+      <div fxLayout="row" fxFlex fxLayoutGap="2em" >
         <div fxFlex>&nbsp;</div>
         <div fxFlex.gt-sm="20" fxFlex.gt-md="15">
           <img class="profile-circle" src="../assets/profile.png" alt="Profile Image">
@@ -27,10 +29,9 @@
         </div>
         <div fxFlex>&nbsp;</div>
       </div>
-
       <div fxLayout="row" fxFlex>
         <div fxFlex>&nbsp;</div>
-        <div fxFlex.gt-xs="50" fxFlex.lt-sm="100">
+        <div fxFlex.gt-sm="50" fxFlex.lt-md="100">
           <p>
             Shannon works with a variety of concerns, including trauma, anxiety disorders, panic disorder, mood disorders, dual diagnosis,
             codependency, parenting issues, bereavement, substance use disorders, personality disorders, relational issues, mindful
@@ -40,10 +41,48 @@
         <div fxFlex>&nbsp;</div>
       </div>
     </div>
+
+    <!-- lt-md -->
+    <div fxLayout="column" fxFlex fxLayoutGap="2em" class="body" [fxHide.gt-sm]="true">
+      <div fxLayout="row" fxFlex>
+        <div fxFlex>&nbsp;</div>
+        <div fxFlex>
+          <img class="profile-circle" src="../assets/profile.png" alt="Profile Image">
+        </div>
+        <div fxFlex>&nbsp;</div>
+      </div>
+      <div fxLayout="row" fxFlex>
+        <p>
+          Shannon Schafhausen is a Licensed Mental Health Counselor in Florida.  She received her Master of Arts in Counseling
+          from the University of Northern Colorado in 2007 and has provided counseling services for 12 years.  She has diverse
+          experience in the mental health field and previously worked as a Certified Addictions Counselor and Licensed Professional
+          Counselor in Colorado.  Shannon has worked in mental health centers, EAP services, outpatient practices, hospitals, and
+          county jails.
+        </p>
+      </div>
+      <div fxLayout="row" fxFlex>
+        <p>
+          Shannon is trained in EMDR, which she sees as a highly effective treatment to resolve several presenting problems to
+          include trauma.  Shannon uses Dialectical Behavior Therapy, Cognitive Behavior Therapy, Acceptance and Commitment Therapy,
+          and several other evidence-based practices and theoretical orientations.  Shannon primarily focuses on strength-based
+          counseling and supports individuals by providing them tools to function in a healthy way in order to meet their goals.
+        </p>
+      </div>
+      <div fxLayout="row" fxFlex>
+        <p>
+          Shannon works with a variety of concerns, including trauma, anxiety disorders, panic disorder, mood disorders, dual diagnosis,
+          codependency, parenting issues, bereavement, substance use disorders, personality disorders, relational issues, mindful
+          self-compassion, suicidal ideation, serious persistent mental health issues, and adjustment disorders.
+        </p>
+      </div>
+    </div>
+
   </div>
   <footer>
     <div fxFlex>&nbsp;</div>
-    <mat-icon>spa</mat-icon>
+    <div fxFlex class="footer-icon">
+      <mat-icon>spa</mat-icon>
+    </div>
     <div fxFlex>&nbsp;</div>
   </footer>
 </div>

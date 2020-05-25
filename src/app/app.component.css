@@ -23,6 +23,10 @@
   transform: scale(1.25);
 }
 
+.body {
+  margin: 0 2em;
+}
+
 .profile-circle {
   width: 12em;
   height: 12em;
@@ -34,18 +38,14 @@
 footer {
   margin-top: 8px;
   line-height: 20px;
+  margin-bottom: 2em;
 }
 
 footer mat-icon {
-  font-size: 6em;
+  transform: scale(3);
   color: #ADD8E6;
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 767px) {
-
-}
-
-@media screen and (max-width: 575px) {
-
+.footer-icon {
+  text-align: center;
 }
