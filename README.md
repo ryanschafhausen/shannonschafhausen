@@ -28,10 +28,11 @@ All asset paths are **relative**, so the site works both at the
 In the repo: **Settings → Pages → Build and deployment**
 
 - **Source:** *Deploy from a branch*
-- **Branch:** `static-rebuild`, folder **`/ (root)`** — the branch currently serving the site.
+- **Branch:** `main`, folder **`/ (root)`** — the branch serving the site.
 
-GitHub publishes within a minute or two of each push. (The old setup deployed a built
-Angular app to the `gh-pages` branch — that branch is no longer used and can be deleted.)
+GitHub publishes within a minute or two of each push to `main`. (The old Angular
+`gh-pages` branch and the temporary `static-rebuild` branch have been removed — `main`
+is now the single source of truth: push to `main` and the live site updates.)
 
 ## Before you go live — checklist
 
