@@ -6,8 +6,8 @@ so it loads instantly and is fully crawlable by search engines.
 
 **Live at:** <https://shannonschafhausencounseling.com>
 
-> Replaces the previous Angular app. The original Angular source is still in `src/`
-> and the git history if it's ever needed.
+> Replaces the previous Angular app. That source has been removed from the working
+> tree but remains in the git history if it's ever needed.
 
 ## Files
 
