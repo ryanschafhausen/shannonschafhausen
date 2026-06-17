@@ -4,6 +4,8 @@ A fast, static, single-page site for a Licensed Mental Health Counselor in Flori
 hosted on **GitHub Pages**. No build step, no framework — just `index.html` + `styles.css`,
 so it loads instantly and is fully crawlable by search engines.
 
+**Live at:** <https://shannonschafhausencounseling.com>
+
 > Replaces the previous Angular app. The original Angular source is still in `src/`
 > and the git history if it's ever needed.
 
@@ -18,18 +20,18 @@ so it loads instantly and is fully crawlable by search engines.
 | `robots.txt`, `sitemap.xml` | Search-engine discovery. |
 | `.nojekyll` | Tells GitHub Pages to serve files as-is (skip Jekyll). |
 
-All asset paths are **relative**, so the site works both at the current
-`…github.io/shannonschafhausen/` URL **and** at the root of a custom domain.
+All asset paths are **relative**, so the site works both at the
+`…github.io/shannonschafhausen/` URL **and** at the root of the custom domain.
 
 ## Deploying on GitHub Pages
 
 In the repo: **Settings → Pages → Build and deployment**
 
 - **Source:** *Deploy from a branch*
-- **Branch:** the branch holding these files (e.g. `master`) and folder **`/ (root)`**
+- **Branch:** `static-rebuild`, folder **`/ (root)`** — the branch currently serving the site.
 
-GitHub publishes within a minute or two. (The old setup deployed a built Angular
-app to the `gh-pages` branch — once this is live you can delete that branch.)
+GitHub publishes within a minute or two of each push. (The old setup deployed a built
+Angular app to the `gh-pages` branch — that branch is no longer used and can be deleted.)
 
 ## Before you go live — checklist
 
@@ -47,14 +49,24 @@ Search the project for these placeholders and replace them:
 > fields and is **not** HIPAA-compliant. Keep detailed health intake on a secure,
 > BAA-covered platform (most scheduling tools offer this).
 
-## Adding a custom domain later
+## Custom domain (configured)
 
-1. Buy a domain from any registrar.
-2. In **Settings → Pages → Custom domain**, enter it (this creates a `CNAME` file).
-3. At your registrar's DNS:
-   - Apex (`example.com`): four `A` records → `185.199.108.153`, `185.199.109.153`,
-     `185.199.110.153`, `185.199.111.153`.
-   - `www`: a `CNAME` record → `ryanschafhausen.github.io`.
-4. Enable **Enforce HTTPS** once DNS verifies (GitHub issues a free certificate).
-5. Update the absolute URLs (canonical, Open Graph, sitemap, robots, JSON-LD)
-   in `index.html`, `sitemap.xml`, and `robots.txt` to the new domain.
+The site serves from **`shannonschafhausencounseling.com`** (registered via Squarespace),
+with `www` redirecting to the bare domain and HTTPS enforced.
+
+Current configuration, for reference:
+
+- **`CNAME`** file in the repo root holds `shannonschafhausencounseling.com`.
+- **GitHub:** Settings → Pages → Custom domain shows the domain, "DNS check successful",
+  and **Enforce HTTPS** enabled (GitHub issues the certificate automatically).
+- **Squarespace DNS:**
+  - Apex (`@`): four `A` records → `185.199.108.153`, `185.199.109.153`,
+    `185.199.110.153`, `185.199.111.153` (plus matching `AAAA` records for IPv6).
+  - `www`: a `CNAME` record → `ryanschafhausen.github.io`.
+- The absolute URLs (canonical, Open Graph, JSON-LD, `sitemap.xml`, `robots.txt`)
+  all point at `https://shannonschafhausencounseling.com/`.
+
+> **New-domain note:** brand-new domains are often blocked by corporate web filters
+> for ~30 days (Newly Registered Domain rules) and may show as "uncategorized."
+> This resolves on its own, or sooner by requesting categorization with the relevant
+> filter vendor (Zscaler, Cisco Umbrella, Palo Alto, etc.).
