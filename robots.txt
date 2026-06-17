@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ryanschafhausen.github.io/shannonschafhausen/sitemap.xml
+Sitemap: https://shannonschafhausencounseling.com/sitemap.xml
