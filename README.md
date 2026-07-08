@@ -1,6 +1,6 @@
-# Shannon Schafhausen, LMHC — website
+# Shannon Schafhausen, LPC — website
 
-A fast, static, single-page site for a Licensed Mental Health Counselor in Florida,
+A fast, static, single-page site for a Licensed Professional Counselor in Colorado,
 hosted on **GitHub Pages**. No build step, no framework — just `index.html` + `styles.css`,
 so it loads instantly and is fully crawlable by search engines.
 
