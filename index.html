@@ -276,6 +276,9 @@
               Please do not include confidential health details in this form. We'll
               continue any sensitive conversation through a secure channel.
             </p>
+            <!-- hCaptcha spam protection. data-captcha="true" uses Web3Forms' -->
+            <!-- shared key, so no signup or site-key configuration is needed. -->
+            <div class="h-captcha" data-captcha="true"></div>
             <button class="btn btn-primary" type="submit">Send message</button>
           </form>
         </div>
@@ -330,5 +333,8 @@
       if (y) { y.textContent = new Date().getFullYear(); }
     })();
   </script>
+
+  <!-- Web3Forms client script — renders the hCaptcha widget above. -->
+  <script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 </html>
