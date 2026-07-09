@@ -34,17 +34,22 @@ GitHub publishes within a minute or two of each push to `main`. (The old Angular
 `gh-pages` branch and the temporary `static-rebuild` branch have been removed — `main`
 is now the single source of truth: push to `main` and the live site updates.)
 
-## Before you go live — checklist
+## Site content (configured)
 
-Search the project for these placeholders and replace them:
+Content and contact details are filled in and live:
 
-- [ ] **Contact email** — `CHANGE_ME@example.com` in `index.html`
-- [ ] **Phone** — `tel:+10000000000` and the `[add phone]` text
-- [ ] **Hours**, **Location**, **Fees**, **Insurance** — the `[add …]` notes
-- [ ] **Contact form key** — get a free access key at <https://web3forms.com>
-      and paste it into the `access_key` hidden field. Submissions are then
-      emailed to you. (Formspree works the same way if preferred.)
-- [ ] Confirm the **bio** wording (e.g. "over a decade" of experience).
+- **Practitioner:** Shannon Schafhausen, LPC — Licensed Professional Counselor, Colorado.
+- **Contact email:** `shannonschafhausencounseling@gmail.com`
+- **Phone:** `719-357-9692`
+- **Hours:** Wednesdays, 8 AM – 3 PM
+- **Location:** Telehealth only.
+- **Fees:** $150 per 50-minute session.
+- **Insurance:** Not accepted.
+- **Contact form:** [Web3Forms](https://web3forms.com) — the `access_key` hidden field
+  in `index.html` delivers submissions to the email above. Spam protection is the
+  built-in hCaptcha (`data-captcha="true"`), which uses Web3Forms' shared site key,
+  so no signup or key configuration is needed. (Formspree works the same way if
+  ever preferred.)
 
 > **Privacy note:** the contact form is intentionally limited to non-sensitive
 > fields and is **not** HIPAA-compliant. Keep detailed health intake on a secure,
