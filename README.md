@@ -40,10 +40,10 @@ Content and contact details are filled in and live:
 
 - **Practitioner:** Shannon Schafhausen, LPC — Licensed Professional Counselor, Colorado.
 - **Contact email:** `shannonschafhausencounseling@gmail.com`
-- **Phone:** `719-357-9692`
-- **Hours:** Wednesdays, 8 AM – 3 PM
+- **Phone:** `719-387-8677`
+- **Hours:** Wednesdays & Thursdays, 8 AM – 3 PM
 - **Location:** Telehealth only.
-- **Fees:** $150 per 50-minute session.
+- **Fees:** $120 per 60-minute session.
 - **Insurance:** Not accepted.
 - **Contact form:** [Web3Forms](https://web3forms.com) — the `access_key` hidden field
   in `index.html` delivers submissions to the email above. Spam protection is the
